@@ -9,85 +9,85 @@
 
 
         <!-- start page title -->
-        <div class="row" style="direction: rtl;">
+        <div class="row" style="direction: ltr;">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0 font-size-18">درخواست های تلفنی</h4>
+                    <h4 class="mb-sm-0 font-size-18">Manual Requests</h4>
                 </div>
             </div>
         </div>
         <!-- end page title -->
 
-        <div class="row" style="direction: rtl;">
+        <div class="row" style="direction: ltr;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">ثبت اطلاعات به صورت دستی</h4>
-                        <p class="card-title-desc">تمام قسمت های زیر را پر کنید.</p>
+                        <h4 class="card-title">Register Information Manually</h4>
+                        <p class="card-title-desc">Fill in all the fields below.</p>
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="mb-3">
-                                        <label for="manualRequestsFullname">نام و نام خانوادگی</label>
+                                        <label for="manualRequestsFullname">Full Name</label>
                                         <input id="manualRequestsFullnameInput" name="manualRequestsFullname"
-                                            type="text" class="form-control" placeholder="نام و نام خانوادگی مشتری">
+                                            type="text" class="form-control" placeholder="Full Name of the Customer">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="manualRequestsAddress">آدرس</label>
+                                        <label for="manualRequestsAddress">Address</label>
                                         <input id="manualRequestsAddressInput" name="manualRequestsAddress" type="text"
-                                            class="form-control" placeholder="آدرس دقیق را وارد کنید.">
+                                            class="form-control" placeholder="Enter the exact address.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="manualRequestsPhoneNumber">شماره تماس</label>
+                                        <label for="manualRequestsPhoneNumber">Phone Number</label>
                                         <input id="manualRequestsPhoneNumberInput" name="manualRequestsPhoneNumber"
-                                            type="text" class="form-control" placeholder="شماره تماس مشتری">
+                                            type="text" class="form-control" placeholder="Phone Number of the Customer">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="manualRequestsAmountOfLoad">میزان بار</label>
+                                        <label for="manualRequestsAmountOfLoad">Amount of Load</label>
                                         <input id="manualRequestsAmountOfLoadInput" name="manualRequestsAmountOfLoad"
                                             type="text" class="form-control"
-                                            placeholder="میزان حدودی بار را به کیلوگرم در این قسمت وارد کنید.">
+                                            placeholder="Enter the approximate amount of load in kilograms.">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="mb-3">
-                                        <label class="control-label">دسته بندی</label>
+                                        <label class="control-label">Category</label>
                                         </br>
                                         <select class="form-control select2" id="manualRequestsCategoryIdInput">
-                                            <option>انتخاب</option>
-                                            <option value="پلاستیک">پلاستیک
+                                            <option>Select</option>
+                                            <option value="Plastic">Plastic
                                             </option>
-                                            <option value="شیشه">شیشه</option>
+                                            <option value="Glass">Glass</option>
                                         </select>
                                     </div>
 
                                     <div class="mb-3">
-                                        <label class="control-label">راننده</label>
+                                        <label class="control-label">Driver</label>
                                         </br>
                                         <select class="form-control select2" id="manualRequestsDriverIdInput">
-                                            <option>انتخاب</option>
-                                            <option value="آقای سعادت">آقای سعادت
+                                            <option>Select</option>
+                                            <option value="Mr. Sadat">Mr. Sadat
                                             </option>
-                                            <option value="آقای یعقوبی">آقای یعقوبی</option>
+                                            <option value="Mr. Yaqubi">Mr. Yaqubi</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="control-label">بازه زمانی</label>
+                                        <label class="control-label">Time Range</label>
                                         </br>
                                         <select class="form-control select2" id="manualRequestsTimeRangeInput">
-                                            <option>انتخاب</option>
+                                            <option>Select</option>
                                             <option value="8-10">8-10
                                             </option>
                                             <option value="10-12">10-12</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="manualRequestsDescription">توضیحات درخواست</label>
+                                        <label for="manualRequestsDescription">Description</label>
                                         <textarea class="form-control" id="manualRequestsDescriptionInput" rows="5"
-                                            placeholder="توضیحات تکمیلی درخواست را در این قسمت وارد کنید."></textarea>
+                                            placeholder="Enter any additional information about the request."></textarea>
                                     </div>
 
                                 </div>
@@ -95,24 +95,24 @@
 
                             <div class="d-flex flex-wrap gap-2">
                                 <button type="button" data-bs-toggle="modal" data-bs-target="#myModal" id="addBtn"
-                                    onclick="addManualRequests()" class="btn btn-primary waves-effect waves-light">افزودن</button>
+                                    onclick="addManualRequests()" class="btn btn-primary waves-effect waves-light">Add</button>
                                 <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
                                     aria-hidden="true" data-bs-scroll="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="myModalLabel">
-                                                    موفق</h5>
+                                                    Success</h5>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="mb-3">
-                                                    <label for="productname" id="notifModal">اضافه شد.</label>
+                                                    <label for="productname" id="notifModal">Added.</label>
 
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" onclick="refresh()"
-                                                    data-bs-dismiss="modal">متوجه شدم</button>
+                                                    data-bs-dismiss="modal">Understood</button>
                                             </div>
                                         </div>
                                     </div><!-- /.modal-content -->
@@ -124,14 +124,14 @@
                     </div>
                 </div>
 
-                <div class="row" style="direction: rtl;">
+                <div class="row" style="direction: ltr;">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-18"> درخواست های تلفنی ثبت شده</h4>
+                            <h4 class="mb-sm-0 font-size-18">Manual Requests</h4>
                         </div>
                     </div>
                 </div>
-                <div class="row" style="direction: rtl;">
+                <div class="row" style="direction: ltr;">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
@@ -139,7 +139,7 @@
                                     <div class="col-sm-4">
                                         <div class="search-box me-2 mb-2 d-inline-block">
                                             <div class="position-relative">
-                                                <input type="text" class="form-control" placeholder="جستجو...">
+                                                <input type="text" class="form-control" placeholder="Search...">
                                                 <i class="bx bx-search-alt search-icon"></i>
                                             </div>
                                         </div>
@@ -153,19 +153,19 @@
                                         <thead class="table-light">
                                             <tr>
                                                 <th style="width: 20px;" class="align-middle">
-                                                    ردیف
+                                                    Index
                                                 </th>
                                                 <!--  <th class="align-middle">شناسه درخواست</th> -->
-                                                <th class="align-middle">نام ونام خانوادگی</th>
-                                                <th class="align-middle">آدرس</th>
-                                                <th class="align-middle">شماره تماس</th>
-                                                <th class="align-middle">میزان بار</th>
-                                                <th class="align-middle">دسته بندی</th>
-                                                <th class="align-middle">راننده</th>
-                                                <th class="align-middle">بازه زمانی</th>
-                                                <th class="align-middle">وضعیت</th>
-                                                <th class="align-middle">توضیحات</th>
-                                                <th class="align-middle">عملیات</th>
+                                                <th class="align-middle">Full Name</th>
+                                                <th class="align-middle">Address</th>
+                                                <th class="align-middle">Phone Number</th>
+                                                <th class="align-middle">Amount of Load</th>
+                                                <th class="align-middle">Category</th>
+                                                <th class="align-middle">Driver</th>
+                                                <th class="align-middle">Time Range</th>
+                                                <th class="align-middle">Status</th>
+                                                <th class="align-middle">Description</th>
+                                                <th class="align-middle">Operations</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -198,11 +198,11 @@
                                                     </td>
                                                     <td>
                                                         <%if(list[i].status==0){%>
-                                                            در انتظار پذیرش
+                                                            Waiting
                                                             <%}else if(list[i].status==1){%>
-                                                                پذیرفته شده
+                                                                Accepted
                                                                 <%}else if(list[i].status==2){%>
-                                                                    انجام شده
+                                                                    Done
                                                                     <%}%>
                                                     </td>
                                                     <td>
@@ -224,13 +224,11 @@
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
                                                                             <h5 class="modal-title" id="myModalLabel">
-                                                                                توجه</h5>
+                                                                                Attention</h5>
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <div class="mb-3">
-                                                                                <label for="productname">آیا از حذف
-                                                                                    اطمینان
-                                                                                    دارید؟</label>
+                                                                                <label for="productname">Are you sure?</label>
                                                                             </div>
                                                                         </div>
                                                                         <div class="modal-footer">
@@ -238,10 +236,10 @@
                                                                                 class="btn btn-primary"
                                                                                 onclick="deleteManualRequest('<%= list[i]._id.toString() %>')"
                                                                                 data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                                data-bs-dismiss="modal">بله</button>
+                                                                                data-bs-dismiss="modal">Yes</button>
                                                                             <button type="button"
                                                                                 class="btn btn-secondary"
-                                                                                data-bs-dismiss="modal">خیر</button>
+                                                                                data-bs-dismiss="modal">No</button>
                                                                         </div>
                                                                     </div>
                                                                 </div><!-- /.modal-content -->

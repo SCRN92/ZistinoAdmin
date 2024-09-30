@@ -9,65 +9,65 @@
 
 
         <!-- start page title -->
-        <div class="row" style="direction: rtl;">
+        <div class="row" style="direction: ltr;">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0 font-size-18">ثبت دریافتی پسماند از راننده</h4>
+                    <h4 class="mb-sm-0 font-size-18">Waste Received From Driver</h4>
                 </div>
             </div>
         </div>
         <!-- end page title -->
 
-        <div class="row" style="direction: rtl;">
+        <div class="row" style="direction: ltr;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">اطلاعات پایه</h4>
-                        <p class="card-title-desc">تمام قسمت های زیر را پر کنید.</p>
+                        <h4 class="card-title">Basic Information</h4>
+                        <p class="card-title-desc">Fill in all the fields below.</p>
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="mb-3">
-                                        <label for="wasteReceivedFullNameDriver">نام و نام خانوادگی راننده</label>
+                                        <label for="wasteReceivedFullNameDriver">Full Name Of Driver</label>
                                         <input id="wasteReceivedFullNameDriverInput" name="wasteReceivedFullNameDriver"
                                             type="text" class="form-control"
-                                            placeholder="نام و نام خانوادگی راننده مورد نظر را وارد کنید.">
+                                            placeholder="Enter the full name of the driver.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="wasteReceivedFullNameCustomer">نام و نام خانوادگی مشتری</label>
+                                        <label for="wasteReceivedFullNameCustomer">Full Name Of Customer</label>
                                         <input id="wasteReceivedFullNameCustomerInput"
                                             name="wasteReceivedFullNameCustomer" type="text" class="form-control"
-                                            placeholder=" نام و نام خانوادگی مشتری مورد نظر را وارد کنید.">
+                                            placeholder="Enter the full name of the customer.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="wasteReceivedWeight">وزن</label>
+                                        <label for="wasteReceivedWeight">Weight</label>
                                         <input id="wasteReceivedWeightInput" name="wasteReceivedPrice" type="text"
-                                            class="form-control" placeholder="کیلوگرم">
+                                            class="form-control" placeholder="Kilogram">
 
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6" style="direction: rtl;">
+                                <div class="col-sm-6" style="direction: ltr;">
                                     <div class="mb-3">
-                                        <label class="wasteReceivedCategory"> دسته بندی دریافتی</label>
+                                        <label class="wasteReceivedCategory">Waste Category</label>
                                         <select class="form-control select2" id="wasteReceivedCategoryInput">
-                                            <option>انتخاب</option>
+                                            <option>Choose Category</option>
                                             <% for(let i=0 ; i < categories.length ; i++){ %>
                                                 <option value="<%=categories[i].price%>">
                                                     <%=categories[i].name%>
                                                 </option>
-                                                <%}%>
+                                            <%}%>
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="wasteReceivedDescription">توضیحات دریافتی</label>
+                                        <label for="wasteReceivedDescription">Description</label>
                                         <textarea class="form-control" id="wasteReceivedDescriptionInput" rows="3"
-                                            placeholder="توضیحات تکمیلی پسماند دریافتی را در این قسمت وارد کنید."></textarea>
+                                            placeholder="Enter any additional information about the waste received."></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="wasteReceivedTotal">جمع کل</label>
+                                        <label for="wasteReceivedTotal">Total</label>
                                         <input class="form-control" id="wasteReceivedTotal" disabled="true">
                                         </textarea>
                                     </div>
@@ -76,25 +76,24 @@
 
                             <div class="d-flex flex-wrap gap-2">
                                 <button data-bs-toggle="modal" data-bs-target="#myModal" type="button"
-                                    onclick="addGetResidue()" class="btn btn-primary waves-effect waves-light">ثبت
-                                    دریافتی</button>
+                                    onclick="addGetResidue()" class="btn btn-primary waves-effect waves-light">Register</button>
                                 <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
                                     aria-hidden="true" data-bs-scroll="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="myModalLabel">
-                                                    موفق</h5>
+                                                    Success</h5>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="mb-3">
-                                                    <label for="productname" id="notifModal">اضافه شد.</label>
+                                                    <label for="productname" id="notifModal">Added Successfully.</label>
 
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" onclick="refresh()"
-                                                    data-bs-dismiss="modal">متوجه شدم</button>
+                                                    data-bs-dismiss="modal">Understood</button>
                                             </div>
                                         </div>
                                     </div><!-- /.modal-content -->
@@ -105,14 +104,14 @@
                     </div>
                 </div>
             </div> <!-- end card-->
-            <div class="row" style="direction: rtl;">
+            <div class="row" style="direction: ltr;">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0 font-size-18"> دریافتی های ثبت شده</h4>
+                        <h4 class="mb-sm-0 font-size-18">Registered Receipts</h4>
                     </div>
                 </div>
             </div>
-            <div class="row" style="direction: rtl;">
+            <div class="row" style="direction: ltr;">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
@@ -120,7 +119,7 @@
                                 <div class="col-sm-4">
                                     <div class="search-box me-2 mb-2 d-inline-block">
                                         <div class="position-relative">
-                                            <input type="text" class="form-control" placeholder="جستجو...">
+                                            <input type="text" class="form-control" placeholder="Search...">
                                             <i class="bx bx-search-alt search-icon"></i>
                                         </div>
                                     </div>
@@ -132,16 +131,14 @@
                                 <thead class="table-light">
                                     <tr>
                                         <th style="width: 20px;" class="align-middle">
-                                            ردیف
+                                            Index
                                         </th>
-                                        <!--  <th class="align-middle">شناسه دریافتی</th> -->
-                                        <th class="align-middle">نام و نام خانوادگی راننده</th>
-                                        <th class="align-middle">نام و نام خانوادگی مشتری</th>
-                                        <th class="align-middle"> دسته بندی دریافتی</th>
-                                        <th class="align-middle"> وزن(کیلوگرم)</th>
-                                        <!-- <th class="align-middle">جمع کل</th> -->
-                                        <th class="align-middle">توضیحات </th>
-                                        <th class="align-middle">عملیات</th>
+                                        <th class="align-middle">Driver Full Name</th>
+                                        <th class="align-middle">Customer Full Name</th>
+                                        <th class="align-middle">Waste Category</th>
+                                        <th class="align-middle">Weight (Kilogram)</th>
+                                        <th class="align-middle">Description</th>
+                                        <th class="align-middle">Operation</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -161,7 +158,7 @@
                                                 <%= list[i].category %>
                                             </td>
                                             <td>
-                                                <%= list[i].weight %> کیلوگرم
+                                                <%= list[i].weight %> KG
                                             </td>
                                             <!--  <td>
                                                 <%= list[i].total %> 
@@ -184,21 +181,20 @@
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
                                                                     <h5 class="modal-title" id="myModalLabel">
-                                                                        توجه</h5>
+                                                                        Attention</h5>
                                                                 </div>
                                                                 <div class="modal-body">
                                                                     <div class="mb-3">
-                                                                        <label for="productname">آیا از حذف اطمینان
-                                                                            دارید؟</label>
+                                                                        <label for="productname">Are you sure you want to delete it?</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-primary"
                                                                         onclick="deleteGetResidue('<%= list[i]._id.toString() %>')"
                                                                         data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        data-bs-dismiss="modal">بله</button>
+                                                                        data-bs-dismiss="modal">Yes</button>
                                                                     <button type="button" class="btn btn-secondary"
-                                                                        data-bs-dismiss="modal">خیر</button>
+                                                                        data-bs-dismiss="modal">No</button>
                                                                 </div>
                                                             </div>
                                                         </div><!-- /.modal-content -->

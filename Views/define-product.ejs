@@ -9,61 +9,61 @@
 
 
         <!-- start page title -->
-        <div class="row" style="direction: rtl;">
+        <div class="row" style="direction: ltr;">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0 font-size-18"> افزودن محصولات فروشگاه</h4>
+                    <h4 class="mb-sm-0 font-size-18"> Add Products </h4>
                 </div>
             </div>
         </div>
         <!-- end page title -->
 
-        <div class="row" style="direction: rtl;">
+        <div class="row" style="direction: ltr;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">اطلاعات پایه</h4>
-                        <p class="card-title-desc">تمام قسمت های زیر را پر کنید.</p>
+                        <h4 class="card-title">Basic Information</h4>
+                        <p class="card-title-desc">Fill in all the fields below.</p>
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="mb-3">
-                                        <label for="productname">نام محصول</label>
+                                        <label for="productname">Product Name</label>
                                         <input id="productnameInput" name="productname" type="text" class="form-control"
-                                            placeholder="نام مورد نظر را وارد کنید.">
+                                            placeholder="Enter the product name.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="manufacturername">درصد تخفیف</label>
+                                        <label for="manufacturername">Discount</label>
                                         <input id="productdiscountInput" name="productdiscount" type="text"
-                                            class="form-control" placeholder="درصد تخفیف مورد نظر را وارد کنید.">
+                                            class="form-control" placeholder="Enter the discount percentage.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="price">قیمت</label>
+                                        <label for="price">Price</label>
                                         <input id="priceInput" name="price" type="text" class="form-control"
-                                            placeholder="قیمت درنظر گرفته شده برای محصول را وارد کنید.">
+                                            placeholder="Enter the price of the product.">
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6" style="direction: rtl;">
+                                <div class="col-sm-6" style="direction: ltr;">
                                     <div class="mb-3">
-                                        <label class="control-label">دسته بندی</label>
+                                        <label class="control-label">Category</label>
                                         <select class="form-control select2" id="categoryInput">
-                                            <option>انتخاب</option>
-                                            <option value="شارژ سیم کارت">شارژ سیم کارت</option>
-                                            <option value="مواد غذایی">مواد غذایی</option>
+                                            <option>Select</option>
+                                            <option value="Option 1">Option 1</option>
+                                            <option value="Option 2">Option 2</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="inventory">موجودی</label>
+                                        <label for="inventory">Inventory</label>
                                         <input id="inventoryInput" name="inventory" type="text" class="form-control"
-                                            placeholder="موجودی محصول را وارد کنید.">
+                                            placeholder="Enter the inventory of the product.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="productdesc">توضیحات محصول</label>
+                                        <label for="productdesc">Description</label>
                                         <textarea class="form-control" id="productdescInput" rows="3"
-                                            placeholder="توضیحات تکمیلی محصول را در این قسمت وارد کنید."></textarea>
+                                            placeholder="Enter the additional product description."></textarea>
                                     </div>
 
                                 </div>
@@ -71,23 +71,23 @@
 
                             <div class="d-flex flex-wrap gap-2">
                                 <button data-bs-toggle="modal" data-bs-target="#myModal" type="button" id="addBtn"
-                                    onclick="addProduct()" class="btn btn-primary waves-effect waves-light">افزودن</button>
+                                        onclick="addProduct()" class="btn btn-primary waves-effect waves-light">Add</button>
                                 <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
                                     aria-hidden="true" data-bs-scroll="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="myModalLabel">
-                                                    موفق</h5>
+                                                    Success</h5>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="mb-3">
-                                                    <label for="productname" id="notifModal">اضافه شد.</label>
+                                                    <label for="productname" id="notifModal">Added.</label>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" onclick="refresh()"
-                                                    data-bs-dismiss="modal">متوجه شدم</button>
+                                                    data-bs-dismiss="modal">OK</button>
                                             </div>
                                         </div>
                                     </div><!-- /.modal-content -->
@@ -99,7 +99,7 @@
                     </div>
                 </div>
 
-                <!-- <div class="card" style="direction: rtl;">
+                <!-- <div class="card" style="direction: ltr;">
                     <div class="card-header">
                         <h4 class="card-title mb-0">عکس محصول</h4>
                     </div>
@@ -117,19 +117,19 @@
                         </form>
                     </div>
                     <div class="d-flex flex-wrap gap-2" style="margin-right:1rem ; margin-bottom: 1rem;">
-                        <button type="submit" class="btn btn-primary waves-effect waves-light">افزودن عکس</button>
-                        <button type="reset" class="btn btn-secondary waves-effect waves-light">لغو</button>
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">Add Image</button>
+                        <button type="reset" class="btn btn-secondary waves-effect waves-light">Cancel</button>
                     </div>
                 </div> end card -->
                 </form>
-                <div class="row" style="direction: rtl;">
+                <div class="row" style="direction: ltr;">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-18"> محصولات ثبت شده</h4>
+                            <h4 class="mb-sm-0 font-size-18">Registered Products</h4>
                         </div>
                     </div>
                 </div>
-                <div class="row" style="direction: rtl;">
+                <div class="row" style="direction: ltr;">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
@@ -137,7 +137,7 @@
                                     <div class="col-sm-4">
                                         <div class="search-box me-2 mb-2 d-inline-block">
                                             <div class="position-relative">
-                                                <input type="text" class="form-control" placeholder="جستجو...">
+                                                <input type="text" class="form-control" placeholder="Search...">
                                                 <i class="bx bx-search-alt search-icon"></i>
                                             </div>
                                         </div>
@@ -149,15 +149,15 @@
                                     <thead class="table-light">
                                         <tr>
                                             <th class="align-middle">
-                                                ردیف
+                                                Index
                                             </th>
                                             <!--  <th class="align-middle">شناسه محصول</th> -->
-                                            <th class="align-middle">نام محصول</th>
-                                            <th class="align-middle">درصد تخفیف</th>
-                                            <th class="align-middle">قیمت</th>
-                                            <th class="align-middle">دسته بندی</th>
-                                            <th class="align-middle">توضیحات</th>
-                                            <th class="align-middle">عملیات</th>
+                                            <th class="align-middle">Product Name</th>
+                                            <th class="align-middle">Discount</th>
+                                            <th class="align-middle">Price</th>
+                                            <th class="align-middle">Category</th>
+                                            <th class="align-middle">Description</th>
+                                            <th class="align-middle">Operations</th>
                                         </tr>
                                     </thead>
                                     <tbody>

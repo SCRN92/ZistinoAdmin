@@ -9,84 +9,84 @@
 
 
         <!-- start page title -->
-        <div class="row" style="direction: rtl;">
+        <div class="row" style="direction: ltr;">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0 font-size-18">افزودن راننده</h4>
+                    <h4 class="mb-sm-0 font-size-18">Add Driver</h4>
                 </div>
             </div>
         </div>
         <!-- end page title -->
 
-        <div class="row" style="direction: rtl;">
+        <div class="row" style="direction: ltr;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">اطلاعات پایه</h4>
-                        <p class="card-title-desc">تمام قسمت های زیر را پر کنید.</p>
+                        <h4 class="card-title">Basic Information</h4>
+                        <p class="card-title-desc">Fill in all the fields below.</p>
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="mb-3">
-                                        <label for="drivername">نام</label>
+                                        <label for="drivername">Name</label>
                                         <input id="drivernameInput" name="drivername" type="text" class="form-control"
-                                            placeholder="نام راننده را وارد کنید.">
+                                            placeholder="Enter the driver's name.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="driverfamily">نام خانوادگی
+                                        <label for="driverfamily">Last Name
                                         </label>
                                         <input id="driverfamilyInput" name="driverfamily" type="text"
-                                            class="form-control" placeholder="  نام خانوادگی راننده را وارد کنید.">
+                                            class="form-control" placeholder="Enter the driver's last name.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="driverPhoneNumber">شماره تماس</label>
+                                        <label for="driverPhoneNumber">Phone Number</label>
                                         <input id="driverPhoneNumberInput" name="driverPhoneNumber" type="text"
-                                            class="form-control" placeholder="     شماره تماس راننده را وارد کنید.">
+                                            class="form-control" placeholder="Enter the driver's phone number.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="driverAddress">آدرس</label>
+                                        <label for="driverAddress">Address</label>
                                         <textarea class="form-control" id="driverAddressInput" rows="1"
-                                            placeholder="  آدرس کامل را در این قسمت وارد کنید."></textarea>
+                                            placeholder="Enter the driver's full address."></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="driverUserName">نام کاربری</label>
+                                        <label for="driverUserName">Username</label>
                                         <input id="driverUserNameInput" name="driverUserName" type="text"
-                                            class="form-control" placeholder="ایمیل راننده در این قسمت وارد شود.">
+                                            class="form-control" placeholder="Enter the driver's email address.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="driverPass">کلمه عبور</label>
+                                        <label for="driverPass">Password</label>
                                         <input id="driverPassInput" name="driverPass" type="text" class="form-control"
-                                            placeholder="کلمه عبور را وارد کنید.">
+                                            placeholder="Enter the driver's password.">
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6" style="direction: rtl;">
+                                <div class="col-sm-6" style="direction: ltr;">
                                     <div class="mb-3">
-                                        <label for="driverNationalCode">کد ملی</label>
+                                        <label for="driverNationalCode">National Code</label>
                                         <input id="driverNationalCodeInput" name="driverNationalCode" type="text"
-                                            class="form-control" placeholder="کد ملی راننده را وارد کنید.">
+                                            class="form-control" placeholder="Enter the driver's national code.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="driverDateOfBirth" class="form-label">تاریخ تولد</label>
+                                        <label for="driverDateOfBirth" class="form-label">Date of Birth</label>
                                         <input class="form-control" type="date" value="2019-08-19"
-                                            id="driverDateOfBirthInput">
+                                                id="driverDateOfBirthInput">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="driverNumberPlates">شماره پلاک</label>
+                                        <label for="driverNumberPlates">Number Plates</label>
                                         <input id="driverNumberPlatesInput" name="driverNumberPlates" type="text"
-                                            class="form-control" placeholder="  شماره پلاک را وارد کنید.">
+                                            class="form-control" placeholder="Enter the driver's number plates.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="driverCarModel">مدل ماشین</label>
+                                        <label for="driverCarModel">Car Model</label>
                                         <input id="driverCarModelInput" name="driverCarModel" type="text"
-                                            class="form-control" placeholder="مدل ماشین را وارد کنید.">
+                                            class="form-control" placeholder="Enter the driver's car model.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="driverDescription">توضیحات</label>
+                                        <label for="driverDescription">Description</label>
                                         <textarea class="form-control" id="driverDescriptionInput" rows="5"
-                                            placeholder="   توضیحات تکمیلی را در این قسمت وارد کنید."></textarea>
+                                            placeholder="Enter any additional notes about the driver."></textarea>
                                     </div>
 
                                 </div>
@@ -102,17 +102,17 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="myModalLabel">
-                                                    موفق</h5>
+                                                    Success</h5>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="mb-3">
-                                                    <label for="drivername" id="notifModal">اضافه شد.</label>
+                                                    <label for="drivername" id="notifModal">Added.</label>
 
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" onclick="refresh()"
-                                                    data-bs-dismiss="modal">متوجه شدم</button>
+                                                    data-bs-dismiss="modal">OK</button>
                                             </div>
                                         </div>
                                     </div><!-- /.modal-content -->
@@ -125,14 +125,14 @@
                 </div>
                 <!-- end card-->
                 </form>
-                <div class="row" style="direction: rtl;">
+                <div class="row" style="direction: ltr;">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-18"> رانندگان ثبت شده</h4>
+                            <h4 class="mb-sm-0 font-size-18">Registered Drivers</h4>
                         </div>
                     </div>
                 </div>
-                <div class="row" style="direction: rtl;">
+                <div class="row" style="direction: ltr;">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
@@ -140,7 +140,7 @@
                                     <div class="col-sm-4">
                                         <div class="search-box me-2 mb-2 d-inline-block">
                                             <div class="position-relative">
-                                                <input type="text" class="form-control" placeholder="جستجو...">
+                                                <input type="text" class="form-control" placeholder="Search...">
                                                 <i class="bx bx-search-alt search-icon"></i>
                                             </div>
                                         </div>
@@ -152,20 +152,19 @@
                                 <table class="table align-middle table-nowrap table-check">
                                     <thead class="table-light">
                                         <tr>
-                                            <th class="align-middle">ردیف </th>
-                                            <!-- <th class="align-middle">شناسه </th> -->
-                                            <th class="align-middle">نام </th>
-                                            <th class="align-middle"> نام خانوادگی </th>
-                                            <th class="align-middle">شماره تماس </th>
-                                            <th class="align-middle">آدرس </th>
-                                            <th class="align-middle">نام کاربری </th>
-                                            <th class="align-middle">کلمه عبور </th>
-                                            <th class="align-middle">کدملی </th>
-                                            <th class="align-middle">تاریخ تولد</th>
-                                            <th class="align-middle">شماره پلاک </th>
-                                            <th class="align-middle">مدل ماشین </th>
-                                            <th class="align-middle">توضیحات </th>
-                                            <th class="align-middle">عملیات </th>
+                                            <th class="align-middle">Row </th>
+                                            <th class="align-middle">Name </th>
+                                            <th class="align-middle">Last Name </th>
+                                            <th class="align-middle">Phone Number </th>
+                                            <th class="align-middle">Address </th>
+                                            <th class="align-middle">Username </th>
+                                            <th class="align-middle">Password </th>
+                                            <th class="align-middle">National Code </th>
+                                            <th class="align-middle">Date of Birth</th>
+                                            <th class="align-middle">Number Plates </th>
+                                            <th class="align-middle">Car Model </th>
+                                            <th class="align-middle">Description </th>
+                                            <th class="align-middle">Actions </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -222,21 +221,20 @@
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <h5 class="modal-title" id="myModalLabel">
-                                                                            توجه</h5>
+                                                                            Attention</h5>
                                                                     </div>
                                                                     <div class="modal-body">
                                                                         <div class="mb-3">
-                                                                            <label for="drivername">آیا از حذف اطمینان
-                                                                                دارید؟</label>
+                                                                            <label for="drivername">Are you sure you want to delete this driver?</label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-primary"
                                                                             onclick="deleteDriver('<%= list[i].name %>')"
                                                                             data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                            data-bs-dismiss="modal">بله</button>
+                                                                            data-bs-dismiss="modal">Yes</button>
                                                                         <button type="button" class="btn btn-secondary"
-                                                                            data-bs-dismiss="modal">خیر</button>
+                                                                            data-bs-dismiss="modal">No</button>
                                                                     </div>
                                                                 </div>
                                                             </div><!-- /.modal-content -->
