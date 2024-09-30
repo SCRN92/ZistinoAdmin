@@ -9,48 +9,48 @@
 
 
         <!-- start page title -->
-        <div class="row" style="direction: rtl;">
+        <div class="row" style="direction: ltr;">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0 font-size-18"> افزودن دسته بندی </h4>
+                    <h4 class="mb-sm-0 font-size-18"> Add Category </h4>
                 </div>
             </div>
         </div>
         <!-- end page title -->
 
-        <div class="row" style="direction: rtl;">
+        <div class="row" style="direction: ltr;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">اطلاعات پایه</h4>
-                        <p class="card-title-desc">تمام قسمت های زیر را پر کنید.</p>
+                        <h4 class="card-title">Basic Information</h4>
+                        <p class="card-title-desc">Fill in all the fields below.</p>
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="mb-3">
-                                        <label for="productname">نام دسته بندی</label>
+                                        <label for="productname">Category Name</label>
                                         <input id="categorynameInput" name="categoryname" type="text"
-                                            class="form-control" placeholder="نام مورد نظر را وارد کنید.">
+                                            class="form-control" placeholder="Enter the category name.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="price">قیمت</label>
+                                        <label for="price">Price</label>
                                         <input id="priceInput" name="price" type="text" class="form-control"
-                                            placeholder="قیمت به ازای هر کیلوگرم را وارد کنید.">
+                                            placeholder="Enter the price per kilogram.">
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6" style="direction: rtl;">
+                                <div class="col-sm-6" style="direction: ltr;">
                                     <div class="mb-3">
-                                        <label for="inventory">حداقل</label>
+                                        <label for="inventory">Minimum</label>
                                         <input id="minInput" name="minInput" type="text" class="form-control"
-                                            placeholder=" حداقل میزان دریافتی در این دسته را وارد کنید.">
+                                            placeholder="Enter the minimum amount received in this category.">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="inventory">حداکثر</label>
+                                        <label for="inventory">Maximum</label>
                                         <input id="maxInput" name="maxInput" type="text" class="form-control"
-                                            placeholder=" حداکثر میزان دریافتی در این دسته را وارد کنید.">
+                                            placeholder="Enter the maximum amount received in this category.">
                                     </div>
 
                                 </div>
@@ -59,25 +59,24 @@
                             <div class="d-flex flex-wrap gap-2">
                                 <button data-bs-toggle="modal" data-bs-target="#myModal" id="addBtn" type="button"
                                     onclick="addCategory()"
-                                    class="btn btn-primary waves-effect waves-light">افزودن</button>
+                                    class="btn btn-primary waves-effect waves-light">Add</button>
                                 <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
                                     aria-hidden="true" data-bs-scroll="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="myModalLabel">
-                                                    موفق</h5>
+                                                    Success</h5>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="mb-3">
                                                     <label for="productname" id="notifModal">
-                                                        اضافه
-                                                        شد.</label>
+                                                        Added successfully.</label>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" onclick="refresh()"
-                                                    data-bs-dismiss="modal">متوجه شدم</button>
+                                                    data-bs-dismiss="modal">OK</button>
                                             </div>
                                         </div>
                                     </div><!-- /.modal-content -->
@@ -90,14 +89,14 @@
                 </div>
                 <!-- end card-->
                 </form>
-                <div class="row" style="direction: rtl;">
+                <div class="row" style="direction: ltr;">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-18"> دسته بندی های ثبت شده</h4>
+                            <h4 class="mb-sm-0 font-size-18">Registered Categories</h4>
                         </div>
                     </div>
                 </div>
-                <div class="row" style="direction: rtl;">
+                <div class="row" style="direction: ltr;">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
@@ -105,7 +104,7 @@
                                     <div class="col-sm-4">
                                         <div class="search-box me-2 mb-2 d-inline-block">
                                             <div class="position-relative">
-                                                <input type="text" class="form-control" placeholder="جستجو...">
+                                                <input type="text" class="form-control" placeholder="Search...">
                                                 <i class="bx bx-search-alt search-icon"></i>
                                             </div>
                                         </div>
@@ -118,14 +117,14 @@
                                     <thead class="table-light">
                                         <tr>
                                             <th style="width: 20px;" class="align-middle">
-                                                ردیف
+                                                Row
                                             </th>
                                             <!-- <th class="align-middle">شناسه دسته بندی</th> -->
-                                            <th class="align-middle">نام دسته بندی</th>
-                                            <th class="align-middle">قیمت</th>
-                                            <th class="align-middle">حداقل(کیلوگرم)</th>
-                                            <th class="align-middle">حداکثر(کیلوگرم)</th>
-                                            <th class="align-middle">عملیات</th>
+                                            <th class="align-middle">Category Name</th>
+                                            <th class="align-middle">Price</th>
+                                            <th class="align-middle">Minimum(kg)</th>
+                                            <th class="align-middle">Maximum(kg)</th>
+                                            <th class="align-middle">Operations</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -140,7 +139,7 @@
                                                     <%=list[i].name %>
                                                 </td>
                                                 <td>
-                                                    <%=list[i].price %> ریال
+                                                    <%=list[i].price %>
                                                 </td>
                                                 <td>
                                                     <%=list[i].min %>
@@ -164,21 +163,20 @@
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <h5 class="modal-title" id="myModalLabel2">
-                                                                            توجه</h5>
+                                                                            Attention</h5>
                                                                     </div>
                                                                     <div class="modal-body">
                                                                         <div class="mb-3">
-                                                                            <label for="productname">آیا از حذف اطمینان
-                                                                                دارید؟</label>
+                                                                            <label for="productname">Are you sure you want to delete it?</label>
                                                                         </div>
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-primary"
                                                                             onclick="deleteCategory('<%= list[i]._id.toString() %>')"
                                                                             data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                            data-bs-dismiss="modal">بله</button>
+                                                                            data-bs-dismiss="modal">Yes</button>
                                                                         <button type="button" class="btn btn-secondary"
-                                                                            data-bs-dismiss="modal">خیر</button>
+                                                                            data-bs-dismiss="modal">No</button>
                                                                     </div>
                                                                 </div>
                                                             </div><!-- /.modal-content -->

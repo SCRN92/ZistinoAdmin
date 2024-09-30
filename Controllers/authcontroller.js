@@ -1,35 +1,41 @@
 const User = require('../Models/userModel.js');
 const crypto = require('crypto');
 const catchAsync = require('../util/catchAsync');
-const sendmail = require('../util//email');
+const sendmail = require('../util/email');
 const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 
+// Ensure __i18n is defined
+const i18n = require("i18n-express");
 
+// Logout user by clearing the JWT cookie
 exports.logout = catchAsync(async (req, res) => {
     res.cookie('jwt', 'undefined', new Date(Date.now() + 10 * 1000));
     res.status(200).redirect('/login');
-})
+});
 
+// Login user and send JWT token
 exports.login = catchAsync(async (req, res, next) => {
-
     const { email, password } = req.body;
+
+    // Check if email and password are provided
     if (!email || !password) {
-        const err = new Error('ایمیل و پسورد را وارد کنید', 400);
+        const err = new Error(i18n('Please_enter_email_and_password'), 400);
         return next(err);
     }
-    const user = await User.findOne({ email }).select('+password');
 
+    // Find user by email and check password
+    const user = await User.findOne({ email }).select('+password');
     if (!user) {
-        const err = new Error("ایمیل یا پسورد اشتباه است");
+        const err = new Error(i18n('Invalid_email_or_password'), 401);
         err.status = 'fail';
         err.statusCode = 401;
         return next(err);
     }
     if (!await user.correctPassword(password, user.password) || !user) {
-        const err = new Error('ایمیل یا پسورد اشتباه است');
+        const err = new Error(i18n('Invalid_email_or_password'), 401);
         err.statusCode = 401;
         return next(err);
     }
@@ -50,8 +56,8 @@ exports.login = catchAsync(async (req, res, next) => {
     })
 });
 
+// Signup new user and send JWT token
 exports.signup = catchAsync(async (req, res, next) => {
-
     const user = await User.create(req.body);
     res.status(200).json({
         status: "success",
@@ -59,10 +65,12 @@ exports.signup = catchAsync(async (req, res, next) => {
     })
 });
 
+// Send password reset email
 exports.sendmail = catchAsync(async (req, res, next) => {
     const user = await User.findOne({ email: req.body.email });
     if (!user) {
-        return next(new Error("can not find user with this email"));
+        const err = new Error(i18n('Can_not_find_user_with_this_email'), 401);
+        return next(err);
     }
     const resettoken = crypto.randomBytes(32).toString('hex');
     const sendtoken = `http://127.0.0.1:` + process.env.PORT + `/resetpassword/` + resettoken;
@@ -77,37 +85,38 @@ exports.sendmail = catchAsync(async (req, res, next) => {
         status: "success",
         sendtoken
     })
-})
+});
 
+// Verify password reset token
 exports.verifytoken = catchAsync(async (req, res, next) => {
     const token = crypto.createHash('sha256').update(req.params.resettoken).digest('hex');
     const user = await User.findOne({ passwordtoken: token });
     if (!user) {
-        return next(new Error("token is invalida or expired"));
-        // res.status(200).redirect('forgotpassword');
+        const err = new Error(i18n('Token_is_invalid_or_expired'), 401);
+        return next(err);
     }
     next();
 });
 
+// Reset user password
 exports.resetpassword = catchAsync(async (req, res, next) => {
     const token = crypto.createHash('sha256').update(req.params.resettoken).digest('hex');
     const user = await User.findOne({ passwordtoken: token });
     if (!user) {
-        return next(new Error("token is invalida or expired"));
-        // res.status(200).redirect('forgotpassword');
+        const err = new Error(i18n('Token_is_invalid_or_expired'), 401);
+        return next(err);
     }
     user.passwordtoken = "undefined";
-    user.passwordresettokenexp = 00000;
+    user.passwordresettokenexp = "undefined";
     user.password = req.body.password;
     user.confirm_password = req.body.confirm_password;
     await user.save();
     res.status(200).json({
         status: "success",
-
     });
+});
 
-})
-
+// Check if user is logged in
 exports.islogin = catchAsync(async (req, res, next) => {
     try {
         if (!req.cookies.jwt) {
@@ -125,6 +134,4 @@ exports.islogin = catchAsync(async (req, res, next) => {
     } catch (err) {
         return res.status(200).redirect('/login');
     }
-})
-
-
+});

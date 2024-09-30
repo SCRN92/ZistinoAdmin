@@ -28,6 +28,8 @@ module.exports = function(passport) {
         new LocalStrategy({ usernameField: 'phone', passwordField: 'code' },
         (phone, password, done) => {
             console.log("phone :",phone);
+            console.log("password :",password);
+            return done(null, { phone: phone, password: password });
         })
     );
 

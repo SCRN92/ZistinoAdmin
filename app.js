@@ -3,12 +3,12 @@ const app = express();
 const path = require('path');
 const route = require('./Routes/route');
 const authroute = require('./Routes/authroute');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
 const i18n = require("i18n-express");
-const logger = require('morgan')
+const logger = require('morgan');
 const session = require('express-session');
-const passport = require('passport')
+const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const upload = require('express-fileupload');
 
@@ -16,22 +16,27 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'Views'));
 app.use(upload());
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(logger('dev'))
+app.use(logger('dev'));
 
 app.use(express.json());
 app.use(session({ resave: false, saveUninitialized: true, secret: 'nodedemo' }));
 app.use(i18n({
-    translationsPath: path.join(__dirname, 'i18n'), // <--- use here. Specify translations files path.
-    siteLangs: ["es", "en", "de", "ru", "it", "fr"],
-    textsVarName: 'translation'
+    translationsPath: path.join(__dirname, 'i18n'),     // Specify translations files path.
+    siteLangs: ["fa", "en", "de", "ru", "it", "fr"],    // Available languages.  
+    cookieLangName: 'ulang',                            // Specify cookie name.
+    defaultLang: 'en',                                  // Specify default language.
+    textsVarName: 'translation',                        // Specify the variable name to be used in views.
+    paramLangName: 'lang',                              // Specify the get parameter name to be used in views.
+    browserEnable: true                                 // Enable browser language detection.
 }));
-require('./Config/passport')(passport);
 
-app.use(passport.initialize());
-app.use(passport.session());
+require('./Config/passport')(passport);                 
+
+app.use(passport.initialize());                          // passport initialization
+app.use(passport.session());                             // passport session
 
 app.use(cookieParser());
 
