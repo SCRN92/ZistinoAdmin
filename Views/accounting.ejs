@@ -1,0 +1,133 @@
+<%- contentFor('HeaderCss') %>
+    <%- contentFor('body') %>
+
+        <!-- start page title -->
+        <div class="row" style="direction: rtl;">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <div class="form-check font-size-16">
+                        <input class="form-check-input" type="checkbox" id="customerlistcheck1">
+                        <label class="form-check-label" for="customerlistcheck01"></label>
+                    </div>
+                    <h4 class="mb-sm-0 font-size-18">مشتریان</h4>
+
+                    <div class="form-check font-size-16">
+                        <input class="form-check-input" type="checkbox" id="customerlistcheck2">
+                        <label class="form-check-label" for="customerlistcheck01"></label>
+                    </div>
+                    <h4 class="mb-sm-0 font-size-18">راننده ها</h4>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- end page title -->
+
+        <div class="row" style="direction: rtl;">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row mb-2">
+                            <div class="col-sm-4">
+                                <div class="search-box me-2 mb-2 d-inline-block">
+                                    <div class="position-relative">
+                                        <input type="text" class="form-control" placeholder="جستجو...">
+                                        <i class="bx bx-search-alt search-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end col-->
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table align-middle table-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>ردیف</th>
+                                        <th>نام کاربری</th>
+                                        <th>شماره تماس</th>
+                                        <th>آدرس</th>
+                                        <th>امتیاز</th>
+                                        <th>بستانکاری</th>
+                                        <th>عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>سروش سعادت</td>
+                                        <td>
+                                            <p class="mb-1">0912-202-3040</p>
+                                        </td>
+                                        <td>خیابان امامت 20 پلاک60 طبفه اول</td>
+                                        <td><span class="badge bg-success font-size-12"><i
+                                                    class="mdi mdi-star me-1"></i>
+                                                4.2</span></td>
+                                        <td>3,000,000 ريال</td>
+                                        <td>
+                                            <div class="col-sm-8">
+                                                <div class="text-sm-end">
+                                                    <button type="button"
+                                                        class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#myModal"><i></i>پرداخت</button>
+                                                    <div id="myModal" class="modal fade" tabindex="-1"
+                                                        aria-labelledby="myModalLabel" aria-hidden="true"
+                                                        data-bs-scroll="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="myModalLabel">
+                                                                        پرداخت</h5>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="mb-3">
+                                                                        <label for="productname">مبلغ پرداختی </label>
+                                                                        <input id="productname" name="productname"
+                                                                            type="text" class="form-control"
+                                                                            placeholder="ريال">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary" onclick="pay()">پرداخت</button>
+                                                                    <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">بستن</button>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal-dialog -->
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- end card-body -->
+                        </div>
+                        <ul class="pagination pagination-rounded justify-content-end mb-2">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                                    <i class="mdi mdi-chevron-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="javascript: void(0);">1</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+        <script>
+            function pay(){
+                
+            }
+        </script>
+        <%- contentFor('FooterJs') %>

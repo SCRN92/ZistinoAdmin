@@ -1,0 +1,348 @@
+<%- contentFor('HeaderCss') %>
+
+    <%- contentFor('body') %>
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="profile-user"></div>
+            </div>
+        </div>
+
+        <div class="row" style="direction: rtl;">
+            <div class="profile-content">
+                <div class="row align-items-end">
+                    <div class="col-sm">
+                        <div class="d-flex align-items-end mt-3 mt-sm-0">
+                            <div class="flex-shrink-0">
+                                <div class="avatar-xxl me-3">
+                                    <img src="assets/images/users/avatar-3.jpg" alt=""
+                                        class="img-fluid rounded-circle d-block img-thumbnail user-profile-image"
+                                        id="user_image1">
+
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div>
+                                    <h5 class="font-size-16 mb-1 setting_user_name" id="setting_user_name">Melinda
+                                        Rivera</h5>
+                                    <p class="text-muted font-size-13 mb-2 pb-2">مدیریت </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 8px; direction: rtl;">
+            <!-- <div class="row align-items-end" style="padding:10px 0px 0px 20px;"> -->
+            <div class="col-sm-auto" style="margin-top: 10px;">
+                <div class="avatar-xs profile-photo-edit">
+                    <input id="profile-img-file-input" type="file" class="profile-img-file-input"
+                        style="display: none;">
+                    <label for="profile-img-file-input" class="profile-photo-edit avatar-xs">
+                        <span class="avatar-lg " style="cursor: pointer;">
+                            <i data-feather="camera"></i>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-auto" style="margin-top: 5px;">
+                <button type="button" class="btn  btn-sm" id="user_edit">
+                    <i data-feather="edit-3"></i></button>
+                <div id="edit-name" class="visually-hidden d-flex justify-content-between">
+                    <input type="text" name="name" id="usrname" value="" class="form-control bg-soft-light border-light"
+                        maxlength="20" />
+                    <div class="float-right">
+                        <button type="submit" id="btnSave" class="btn btn-primary btn-block waves-effect waves-light"
+                            style="display: block;">
+                            ذخیره</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- </div> -->
+        </div>
+
+        <div class="row" style="direction: rtl;">
+            <div class="col-lg-12">
+                <div class="card bg-transparent shadow-none">
+                    <div class="card-body">
+                        <ul class="nav nav-tabs-custom card-header-tabs border-top mt-2" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link px-3 active" data-bs-toggle="tab" href="#overview" role="tab">بیشتر
+                                    بدانید</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="direction: rtl;">
+            <div class="col-xl-8 col-lg-8">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="overview" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">درباره ما</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <div>
+                                    <div class="pb-3">
+                                        <h5 class="font-size-15">سازمان مدیریت پسماند:</h5>
+                                        <div class="text-muted">
+                                            <p class="mb-2">سازمان تنظیف و بازیافت مواد شهرداری با هدف بهبود وضعیت نظافت
+                                                شهری و ارتقاء مدیریت پسماندها تشکیل گردید. قبل از این خدمات توسط شهرداری
+                                                های مناطق توســط سازمان خدمات شهری ارائه می گردید. شایان ذکر است، سازمان
+                                                مدیریت پسماند شهرداری اولین ارگان تخصصی پسماندها در کشـور، در زمینه
+                                                اجـرای کلیه عناصر مـوظف و امـور پشتیبانی مدیـریت پسماندها بـه صورت واحد
+                                                می باشد.
+                                                مأموریت سازمان مدیریت پسماند شهرداری برنامه ریزی، ساماندهی، مراقبت و
+                                                عملیات اجرایی مربوط به تولید، جداسازی، ذخیره سازی، جمع آوری، حمل و نقل،
+                                                بازیافت، پردازش و دفع پسماندهای عادی و جزء ویژه و آموزش و اطلاع رسانی در
+                                                این زمینه، بر اساس قانون مدیریت پسماندها و آئین نامه اجرایی آن و همچنین
+                                                نظافت شهری در محدوده و حریم شهر با توجه خاص به نظرات خدمات گیرندگان و
+                                                جلب مشارکت آنان است.
+
+                                            </p>
+
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="py-1"><i
+                                                        class="mdi mdi-circle-medium me-1 text-success align-middle"></i>
+                                                    1</li>
+                                                <li class="py-1"><i
+                                                        class="mdi mdi-circle-medium me-1 text-success align-middle"></i>
+                                                    2</li>
+                                                <li class="py-1"><i
+                                                        class="mdi mdi-circle-medium me-1 text-success align-middle"></i>
+                                                    3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end card body -->
+                        </div>
+                        <!-- end card -->
+                    </div>
+                    <!-- end tab pane -->
+
+                    <div class="tab-pane" id="post" role="tabpanel">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="blog-post">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar-lg me-3">
+                                            <img src="assets/images/users/avatar-6.jpg" alt=""
+                                                class="img-fluid rounded-circle d-block">
+                                        </div>
+                                        <div class="flex-1">
+                                            <h5 class="font-size-15 text-truncate"><a href="#" class="text-dark">
+                                                    سروش سعادت</a></h5>
+                                            <p class="font-size-13 text-muted mb-0">22 مرداد1401</p>
+                                        </div>
+                                    </div>
+                                    <div class="pt-3">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item me-3">
+                                                <a href="javascript: void(0);" class="text-muted">
+                                                    <i class="bx bx-purchase-tag-alt align-middle text-muted me-1"></i>
+                                                    خبرنگار
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item me-3">
+                                                <a href="javascript: void(0);" class="text-muted">
+                                                    <i class="bx bx-comment-dots align-middle text-muted me-1"></i> 5
+                                                    نظر
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <p class="text-muted">تسهیلات بیمه آتش سوزی با تحویل بازیافت/ شیرابه‌ها تصفیه
+                                            می‌شود!!!
+                                            به گزارش خبرنگار مهر، غلامرضا ساکتی در نشست گپ و گفت با اصحاب رسانه اظهار
+                                            داشت: اولین سازمان شهرداری اصفهان که دارای یک برنامه راهبردی در افق ۱۴۰۵
+                                            است، که در این افق برنامه‌ها ذیل اهداف سازمان طرح‌ریزی می‌شود.
+
+                                            وی در خصوص پروژه‌های سال ۱۴۰۱ سازمان مدیریت پسماند اصفهان افزود: امسال تاکید
+                                            بر استفاده از شرکت‌های دانش بنیان بوده و اکثر برنامه‌های سازمان وبرنامه‌های
+                                            راهبردی بر این اساس بوده است و برنامه ریزی برای استفاده از این شرکت‌ها بوده
+                                            است.
+
+                                            مدیرعامل سازمان مدیریت پسماند شهرداری اصفهان ادامه داد: یکی از برنامه‌های
+                                            اصلی سازمان پسماند ایجاد کارخانه هاضم بی هوازی است که مواد آلی را به کود
+                                            کمپوس تبدیل می‌کند و دو خروجی کود با کیفیت و گاز دارد که از گاز آن نیز
+                                            استفاده می‌شود، همچنین بوی بد اطراف کارخانه‌های تولید کود کمپوس به خاطر
+                                            هوازی بودن است که اگر این کارخانه ایجاد شود بوی بد آن نیز رفع می‌شود که برای
+                                            اولین بار در کشور به صورت موفق اجرایی خواهد شد.
+
+                                            ساکتی با اشاره به تولید روزانه ۹۰۰ تن پسماند خانگی در شهر اصفهان اضافه کرد:
+                                            سه خط پردازش در پسماند در دو بخش کلی وجود دارد، بخش‌های اصلی زباله شامل مواد
+                                            آلی و فساد پذیر و مواد ریجکتی و دفعی است که دفن بهداشتی مواد ریجکتی مهندسی
+                                            می‌شود و بخش فسادپذیر نیز تبدیل به کود کمپوس می‌شود.
+
+                                            وی ابراز داشت: حدود ۵۵۰ تن از کل زباله روزانه را زباله فساد پذیر تشکیل
+                                            می‌دهد که در کارخانه کمپوس تبدیل به کود می‌شود که از این مقدار روزانه حدود
+                                            ۱۲۰ تن کود کمپوس تولید می‌شود که این روند از طریق کارخانه هاضم بی هوازی
+                                            انجام می‌شود و می‌تواند مشکل بوی بد محور باغ رضوان را حل کند.
+
+                                            مدیرعامل سازمان مدیریت پسماند شهرداری اصفهان در خصوص آمار شیرابه در شهر
+                                            اصفهان اضافه کرد: بعضاً گفته می‌شود که میزان شیرابه اصفهان روزانه ۵۰ تن است
+                                            که صحیح نیست زیرا بخشی از آن تبخیر و بخش دیگر در حمل و نقل از بین می‌رود و
+                                            عدد اصلی شیرابه روزانه ۴۰ تن است.
+
+                                            وی با بیان اینکه مدیریت شیرابه سال گذشته برای اولین بار در اصفهان انجام شد،
+                                            تصریح کرد: در سال جای تصفیه شیرابه به کمک شرکت‌های دانش بنیان مدنظر است که
+                                            به زودی انجام می‌شود و با این امر روزانه حدود ۱۰ تن از شیرابه به آب تبدیل
+                                            می‌شود و در روند خود سازمان پسماند مورد استفاده قرار می‌گیرد و باقیمانده آن
+                                            به صورت پسماند خشک دفع مهندسی می‌شود و با این امر شیرابه نفوذ به زمین ندارد.
+
+                                            ساکتی با اشاره به تولید روزانه ۷۵ تن بازیافت در اصفهان ابراز داشت: قطعاً
+                                            پسماند خشک در شهر اصفهان خیلی بیشتر است و عمده مشکل ما تفکیک در مبدا نیست،
+                                            بلکه تحویل در مبدا است که به افراد غیر معتبر داده می‌شود و روند غیرقانونی را
+                                            طی می‌کند و هدف ما با آموزش و فرهنگ سازی تولید روزانه ۱۰۰ تن بازیافت تا
+                                            پایان سال است مه از طریق راه قانونی جمع آوری شود.
+
+                                            وی در خصوص طرح‌های تشویقی اهدا بازیافت به ایستگاه‌های شهرداری گفت: یکی از
+                                            برنامه‌های اصلی بیمه آتس سوزی منازل با مبالغ بسیار کم از طریق بازیافت است که
+                                            می‌تواند با ارقام کمی اجرایی شود، همچنین سایر پکیج‌های تشویقی بیمه در آینده
+                                            مدنظر است.
+
+                                            مدیرعامل سازمان مدیریت پسماند شهرداری اصفهان در خصوص پسماندهای ساختمانی
+                                            اصفهان اضافه کرد: در اصفهان روزانه ۳ هزار و ۵۰۰ تن پسماند ساختمانی داریم که
+                                            بخشی از آن به صورت غیر قانونی دفع می‌شود اما با تفاهم نامه با اتحادیه خاک
+                                            برداران روند خاک برداری توسط شهرداری تحت نظر قرار می‌گیرد که تمامی آن به
+                                            صورت قانونی دفع شود.
+
+                                            وی افزود: در حال حاضر زباله‌های ساختمانی در گردنه زینل دفع می‌شود که تا ۵۰
+                                            سال آینده با روند فعلی ظرفیت دارد، همچنین سایت غربی دفع پسماند ساختمانی
+                                            مدنظر است که برای موقعیت آن منتظر معرفی محیط زیست هستیم تا در اسرع وقت انجام
+                                            شود.
+
+                                            ساکتی با تاکید بر لزوم فرهنگ سازی در حوزه پسماند تصریح کرد: تاکید اصلی ما
+                                            تولید حداقلی پسماند است، که در این راستا محصولات صوتی و تصویری در فضای مجازی
+                                            در ابتدای مهر ماه منتشر می‌شود، همچنین کتب فرهنگ سازی پسماند به دانش آموزان
+                                            برای فرهنگ سازی داده می‌شود.
+                                        </p>
+
+                                    </div>
+                                    <div class="position-relative mt-3">
+                                        <img src="assets/images/news.jpg" alt="" class="img-thumbnail">
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <!-- end blog post -->
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+            <!-- end tab pane -->
+        </div>
+        <!-- end tab content -->
+        </div>
+        <!-- end col -->
+
+       
+        <!-- end col -->
+        </div>
+        <!-- end row -->
+        <%- contentFor('FooterJs') %>
+            <!-- apexcharts -->
+            <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+            <script src="assets/js/pages/profile.init.js"></script>
+            <script>
+                var profile_img = image ? image : "default_image.jpg";
+                var preview = document.querySelectorAll(".user-profile-image");
+                var profile_name = name ? name : "defaultname";
+                var previewname = document.querySelectorAll(".setting_user_name");
+
+                Array.from(preview).forEach((element, index) => {
+                    element.src = '/assets/images/profile_pictures/' + profile_img;
+                });
+                Array.from(previewname).forEach((element, index) => {
+                    element.innerHTML = profile_name;
+                });
+                document.querySelector("#profile-img-file-input").addEventListener("change", function () {
+                    var preview = document.querySelectorAll(".user-profile-image");
+                    // var topbarimage= document.getElementById('user_image');
+                    var file = document.querySelector(".profile-img-file-input").files[0];
+                    var filename = file.name;
+                    var extName = filename.split(".").pop();
+                    var imgList = ["png", "jpg", "jpeg"];
+
+                    if (!imgList.includes(extName)) {
+                        alertify.error(`Invalid Image`, "Error");
+                    } else {
+                        var reader = new FileReader();
+                        reader.addEventListener(
+                            "load",
+                            function () {
+                                Array.from(preview).forEach((element, index) => {
+                                    element.src = reader.result;
+                                });
+
+                            },
+                            false
+                        );
+                        if (file) {
+                            let formData = new FormData();
+                            formData.append("file", file);
+                            formData.append("user_id", userId);
+                            fetch("/profileUpdate", {
+                                method: "POST",
+                                body: formData
+                            });
+                            reader.readAsDataURL(file);
+                            data = JSON.parse(localStorage.getItem("currentUser"));
+                            isvalue = Object.assign(data.data.user, {
+                                image: formData.get('file').name
+                            });
+                            localStorage.setItem("currentUser", JSON.stringify(data));
+                            image = filename;
+                            //setimg(image);
+                        }
+                    }
+                });
+                // Profile Upload and Update
+                document.getElementById("user_edit").onclick = function () {
+
+                    document.getElementById("user_edit").classList.toggle("visually-hidden");
+                    document.getElementById("edit-name").classList.toggle("visually-hidden");
+
+                    var username = document.getElementById("setting_user_name").textContent;
+                    document.getElementById("usrname").value = username;
+
+                };
+
+                // current user name edit
+                document.querySelector("#btnSave").addEventListener("click", (e) => {
+                    e.preventDefault();
+                    var name = document.getElementById("usrname").value;
+                    var userName = document.querySelectorAll(".setting_user_name");
+                    Array.from(userName).forEach((element, index) => {
+                        element.innerHTML = name;
+                    });
+                    let formData = new FormData();
+                    formData.append("name", name);
+                    formData.append("user_id", userId);
+                    fetch("/changename", {
+                        method: "POST",
+                        body: formData
+                    });
+
+                    data = JSON.parse(localStorage.getItem("currentUser"));
+                    isvalue = Object.assign(data.data.user, {
+                        name: name
+                    });
+                    localStorage.setItem("currentUser", JSON.stringify(Object.assign(data, isvalue)));
+                    document.getElementById("edit-name").classList.toggle("visually-hidden");
+                    document.getElementById("user_edit").classList.toggle("visually-hidden");
+                    username = name;
+
+                });
+            </script>

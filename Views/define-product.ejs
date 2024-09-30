@@ -1,0 +1,284 @@
+<%- contentFor('HeaderCss') %>
+
+    <!-- select2 css -->
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- dropzone css -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+    <%- contentFor('body') %>
+
+
+        <!-- start page title -->
+        <div class="row" style="direction: rtl;">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 font-size-18"> افزودن محصولات فروشگاه</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row" style="direction: rtl;">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">اطلاعات پایه</h4>
+                        <p class="card-title-desc">تمام قسمت های زیر را پر کنید.</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="productname">نام محصول</label>
+                                        <input id="productnameInput" name="productname" type="text" class="form-control"
+                                            placeholder="نام مورد نظر را وارد کنید.">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="manufacturername">درصد تخفیف</label>
+                                        <input id="productdiscountInput" name="productdiscount" type="text"
+                                            class="form-control" placeholder="درصد تخفیف مورد نظر را وارد کنید.">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="price">قیمت</label>
+                                        <input id="priceInput" name="price" type="text" class="form-control"
+                                            placeholder="قیمت درنظر گرفته شده برای محصول را وارد کنید.">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6" style="direction: rtl;">
+                                    <div class="mb-3">
+                                        <label class="control-label">دسته بندی</label>
+                                        <select class="form-control select2" id="categoryInput">
+                                            <option>انتخاب</option>
+                                            <option value="شارژ سیم کارت">شارژ سیم کارت</option>
+                                            <option value="مواد غذایی">مواد غذایی</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="inventory">موجودی</label>
+                                        <input id="inventoryInput" name="inventory" type="text" class="form-control"
+                                            placeholder="موجودی محصول را وارد کنید.">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="productdesc">توضیحات محصول</label>
+                                        <textarea class="form-control" id="productdescInput" rows="3"
+                                            placeholder="توضیحات تکمیلی محصول را در این قسمت وارد کنید."></textarea>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2">
+                                <button data-bs-toggle="modal" data-bs-target="#myModal" type="button" id="addBtn"
+                                    onclick="addProduct()" class="btn btn-primary waves-effect waves-light">افزودن</button>
+                                <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
+                                    aria-hidden="true" data-bs-scroll="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="myModalLabel">
+                                                    موفق</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="mb-3">
+                                                    <label for="productname" id="notifModal">اضافه شد.</label>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" onclick="refresh()"
+                                                    data-bs-dismiss="modal">متوجه شدم</button>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div>
+                                <!-- <button type="reset" class="btn btn-secondary waves-effect waves-light">لغو</button> -->
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- <div class="card" style="direction: rtl;">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">عکس محصول</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/" method="" class="dropzone">
+                            <div class="fallback">
+                                <input name="file" type="file" multiple />
+                            </div>
+                            <div class="dz-message needsclick">
+                                <div class="mb-3">
+                                    <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                </div>
+                                <h4>فایل عکس را در این قسمت رها کنید و یا بارگزاری را انتخاب کنید.</h4>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2" style="margin-right:1rem ; margin-bottom: 1rem;">
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">افزودن عکس</button>
+                        <button type="reset" class="btn btn-secondary waves-effect waves-light">لغو</button>
+                    </div>
+                </div> end card -->
+                </form>
+                <div class="row" style="direction: rtl;">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                            <h4 class="mb-sm-0 font-size-18"> محصولات ثبت شده</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="direction: rtl;">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row mb-2">
+                                    <div class="col-sm-4">
+                                        <div class="search-box me-2 mb-2 d-inline-block">
+                                            <div class="position-relative">
+                                                <input type="text" class="form-control" placeholder="جستجو...">
+                                                <i class="bx bx-search-alt search-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end col-->
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table align-middle table-nowrap table-check">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th class="align-middle">
+                                                ردیف
+                                            </th>
+                                            <!--  <th class="align-middle">شناسه محصول</th> -->
+                                            <th class="align-middle">نام محصول</th>
+                                            <th class="align-middle">درصد تخفیف</th>
+                                            <th class="align-middle">قیمت</th>
+                                            <th class="align-middle">دسته بندی</th>
+                                            <th class="align-middle">توضیحات</th>
+                                            <th class="align-middle">عملیات</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for(var i=0 ; i < list.length ; i++){ %>
+                                            <tr>
+                                                <td>
+                                                    <%=i+1%>
+                                                </td>
+
+                                                <td>
+                                                    <%=list[i].name %>
+                                                </td>
+                                                <td>
+                                                    <%=list[i].discount %> درصد
+                                                </td>
+                                                <td>
+                                                    <%=list[i].price %> ریال
+                                                </td>
+                                                <td>
+                                                    <%=list[i].category %>
+                                                </td>
+                                                <td>
+                                                    <%=list[i].description %>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex gap-3">
+                                                        <a href="javascript:updateProduct('<%=list[i]._id.toString()%>','<%= list[i].name.toString()%>','<%= list[i].discount.toString()%>','<%= list[i].price.toString()%>','<%= list[i].category.toString()%>','<%= list[i].inventory.toString()%>','<%= list[i].description.toString()%>');"
+                                                            class="text-success"><i
+                                                                class="mdi mdi-pencil font-size-18"></i></a>
+                                                        <a href="javascript:void(0);" class="text-danger"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#myModal2<%=list[i]._id.toString()%>">
+                                                            <i class="mdi mdi-delete font-size-18"></i></a>
+                                                        <div id="myModal2<%=list[i]._id.toString()%>" class="modal fade"
+                                                            tabindex="-1" aria-labelledby="myModalLabel"
+                                                            aria-hidden="true" data-bs-scroll="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="myModalLabel">
+                                                                            توجه</h5>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="mb-3">
+                                                                            <label for="productname">آیا از حذف اطمینان
+                                                                                دارید؟</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-primary"
+                                                                            onclick="deleteProduct('<%= list[i]._id.toString() %>')"
+                                                                            data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                            data-bs-dismiss="modal">بله</button>
+                                                                        <button type="button" class="btn btn-secondary"
+                                                                            data-bs-dismiss="modal">خیر</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- /.modal-content -->
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                            <% } %>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <ul class="pagination pagination-rounded justify-content-end mb-2">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                                        <i class="mdi mdi-chevron-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="javascript: void(0);">1</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var givenId = 'none';
+            function addProduct() {
+                addItem(["productnameInput", "productdiscountInput", "priceInput", "categoryInput", "inventoryInput", "productdescInput"],
+                    ["name", "discount", "price", "category", "inventory", "description"],
+                    givenId, "/define-product/newProduct")
+                givenId = ""
+            }
+            function updateProduct(id, nameTxt, discountTxt, priceTxt, categoryTxt, inventoryTxt, descriptionTxt) {
+                givenId = id;
+                
+                var name = document.getElementById("productnameInput");
+                var discount = document.getElementById("productdiscountInput");
+                var price = document.getElementById("priceInput");
+                var category = document.getElementById("categoryInput");
+                var inventory = document.getElementById("inventoryInput");
+                var description = document.getElementById("productdescInput");
+
+                name.value = nameTxt;
+                discount.value = discountTxt;
+                price.value = priceTxt;
+                category.value = categoryTxt;
+                inventory.value = inventoryTxt;
+                description.value = descriptionTxt;
+
+                btn.innerText = "به روز رسانی"
+            }
+            function deleteProduct(id) {
+                deleteItem(id, "/define-product/deleteProduct");
+            }
+        </script>
+        <!-- end row -->
+        <%- contentFor('FooterJs') %>
+            <script src="assets/libs/select2/js/select2.min.js"></script>
+
+            <!-- dropzone plugin -->
+            <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+
+            <!-- init js -->
+            <script src="assets/js/pages/ecommerce-select2.init.js"></script>

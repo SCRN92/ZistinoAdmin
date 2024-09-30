@@ -1,0 +1,124 @@
+<%- contentFor('HeaderCss') %>
+
+    <!-- select2 css -->
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- dropzone css -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+    <%- contentFor('body') %>
+
+
+        <!-- start page title -->
+        <div class="row" style="direction: rtl;">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 font-size-18">عدم تایید ها</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row" style="direction: rtl;">
+            <div class="col-12">
+                <div class="row" style="direction: rtl;">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table align-middle table-nowrap table-check">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th class="align-middle">ردیف </th>
+                                                <th class="align-middle">تاریخ </th>
+                                                <th class="align-middle"> نام و نام خانوادگی راننده </th>
+                                                <th class="align-middle">نام و نام خانوادگی مشتری</th>
+                                                <th class="align-middle">شناسه سفارش</th>
+                                                <th class="align-middle">توضیحات </th>
+                                                <th class="align-middle">عملیات </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    1
+                                                </td>
+                                                <td>
+                                                    <a>1401/06/05</a>
+                                                </td>
+                                                <td>
+                                                    سروش سعادت
+                                                </td>
+                                                <td>
+                                                    سیما حلمی
+                                                </td>
+                                                <td>
+                                                    1001
+                                                </td>
+                                                <td>
+                                                    عدم تطابق سفارش ثبت شده
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex gap-3">
+                                                        <a href="javascript:void(0);" class="text-danger"
+                                                            data-bs-toggle="modal" data-bs-target="#myModal2">
+                                                            <i class="mdi mdi-delete font-size-18"></i></a>
+                                                        <div id="myModal2" class="modal fade" tabindex="-1"
+                                                            aria-labelledby="myModalLabel" aria-hidden="true"
+                                                            data-bs-scroll="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="myModalLabel">
+                                                                            توجه</h5>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="mb-3">
+                                                                            <label for="productname">آیا از حذف اطمینان
+                                                                                دارید؟</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-primary"
+                                                                            data-bs-dismiss="modal">بله</button>
+                                                                        <button type="button" class="btn btn-secondary"
+                                                                            data-bs-dismiss="modal">خیر</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- /.modal-content -->
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="pagination pagination-rounded justify-content-end mb-2">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                                            <i class="mdi mdi-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="javascript: void(0);">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- end row -->
+        <%- contentFor('FooterJs') %>
+            <script src="assets/libs/select2/js/select2.min.js"></script>
+
+            <!-- dropzone plugin -->
+            <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+
+            <!-- init js -->
+            <script src="assets/js/pages/ecommerce-select2.init.js"></script>

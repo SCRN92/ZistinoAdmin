@@ -1,0 +1,106 @@
+<%- contentFor('HeaderCss') %>
+    <!-- nouisliderribute css -->
+    <link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css">
+    <%- contentFor('body') %>
+        <!-- start page title -->
+        <div class="row" style="direction:rtl ;">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 font-size-18">فروشگاه</h4>
+                    <div class="col-lg-8 col-sm-6">
+                        <form class="mt-4 mt-sm-0 float-sm-end d-sm-flex align-items-center">
+                            <div class="search-box me-2">
+                                <div class="position-relative">
+                                    <input type="text" class="form-control border-0" placeholder="جستجو...">
+                                    <i class="bx bx-search-alt search-icon"></i>
+                                </div>
+                            </div>
+                           <!--  <ul class="nav nav-pills product-view-nav justify-content-end mt-3 mt-sm-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#"><i class="bx bx-grid-alt"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="bx bx-list-ul"></i></a>
+                                </li>
+                            </ul> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+        <div class="row" style="direction: rtl;">
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <h5 class="font-size-14 mb-3">دسته بندی محصولات</h5>
+                            <ul class="list-unstyled product-list">
+                                <li><a href="javascript: void(0);"><i class="mdi mdi-chevron-right me-1"></i>
+                                        مواد غذایی</a></li>
+                                <li><a href="javascript: void(0);"><i class="mdi mdi-chevron-right me-1"></i>پلاستیک
+                                        جات</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-xl-4 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="product-img position-relative">
+                                    <img src="assets/images/product/img-1.jpg" alt="" class="img-fluid mx-auto d-block">
+                                </div>
+                                <div class="d-flex justify-content-between align-items-end mt-4">
+                                    <div>
+                                        <h5 class="mb-3 text-truncate"><a href="javascript: void(0);"
+                                                class="text-dark">پلاستیک زباله </a></h5>
+                                        <b>قیمت :
+                                        </b>
+                                        <b>25,000 ريال</b></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-sm-8" style="direction: ltr;">
+                                <div class="text-sm-end">
+                                    <button type="button"
+                                        class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"><i
+                                            class="mdi mdi-account-cash"></i>  سبدخرید</button>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="pagination pagination-rounded justify-content-center mt-3 mb-4 pb-1">
+                            <li class="page-item disabled">
+                                <a href="javascript: void(0);" class="page-link"><i
+                                        class="mdi mdi-chevron-left"></i></a>
+                            </li>
+                            <li class="page-item active">
+                                <a href="javascript: void(0);" class="page-link">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="javascript: void(0);" class="page-link"><i
+                                        class="mdi mdi-chevron-right"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- end row -->
+
+        <%- contentFor('FooterJs') %>
+            <!-- nouisliderribute js -->
+            <script src="assets/libs/nouislider/nouislider.min.js"></script>
+            <script src="assets/libs/wnumb/wNumb.min.js"></script>
+
+            <!-- init js -->
+            <script src="assets/js/pages/product-filter-range.init.js"></script>

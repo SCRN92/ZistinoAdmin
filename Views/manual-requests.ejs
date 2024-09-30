@@ -1,0 +1,327 @@
+<%- contentFor('HeaderCss') %>
+
+    <!-- select2 css -->
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- dropzone css -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+    <%- contentFor('body') %>
+
+
+        <!-- start page title -->
+        <div class="row" style="direction: rtl;">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 font-size-18">درخواست های تلفنی</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row" style="direction: rtl;">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">ثبت اطلاعات به صورت دستی</h4>
+                        <p class="card-title-desc">تمام قسمت های زیر را پر کنید.</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="manualRequestsFullname">نام و نام خانوادگی</label>
+                                        <input id="manualRequestsFullnameInput" name="manualRequestsFullname"
+                                            type="text" class="form-control" placeholder="نام و نام خانوادگی مشتری">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="manualRequestsAddress">آدرس</label>
+                                        <input id="manualRequestsAddressInput" name="manualRequestsAddress" type="text"
+                                            class="form-control" placeholder="آدرس دقیق را وارد کنید.">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="manualRequestsPhoneNumber">شماره تماس</label>
+                                        <input id="manualRequestsPhoneNumberInput" name="manualRequestsPhoneNumber"
+                                            type="text" class="form-control" placeholder="شماره تماس مشتری">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="manualRequestsAmountOfLoad">میزان بار</label>
+                                        <input id="manualRequestsAmountOfLoadInput" name="manualRequestsAmountOfLoad"
+                                            type="text" class="form-control"
+                                            placeholder="میزان حدودی بار را به کیلوگرم در این قسمت وارد کنید.">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label class="control-label">دسته بندی</label>
+                                        </br>
+                                        <select class="form-control select2" id="manualRequestsCategoryIdInput">
+                                            <option>انتخاب</option>
+                                            <option value="پلاستیک">پلاستیک
+                                            </option>
+                                            <option value="شیشه">شیشه</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="control-label">راننده</label>
+                                        </br>
+                                        <select class="form-control select2" id="manualRequestsDriverIdInput">
+                                            <option>انتخاب</option>
+                                            <option value="آقای سعادت">آقای سعادت
+                                            </option>
+                                            <option value="آقای یعقوبی">آقای یعقوبی</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="control-label">بازه زمانی</label>
+                                        </br>
+                                        <select class="form-control select2" id="manualRequestsTimeRangeInput">
+                                            <option>انتخاب</option>
+                                            <option value="8-10">8-10
+                                            </option>
+                                            <option value="10-12">10-12</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="manualRequestsDescription">توضیحات درخواست</label>
+                                        <textarea class="form-control" id="manualRequestsDescriptionInput" rows="5"
+                                            placeholder="توضیحات تکمیلی درخواست را در این قسمت وارد کنید."></textarea>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#myModal" id="addBtn"
+                                    onclick="addManualRequests()" class="btn btn-primary waves-effect waves-light">افزودن</button>
+                                <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
+                                    aria-hidden="true" data-bs-scroll="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="myModalLabel">
+                                                    موفق</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="mb-3">
+                                                    <label for="productname" id="notifModal">اضافه شد.</label>
+
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" onclick="refresh()"
+                                                    data-bs-dismiss="modal">متوجه شدم</button>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div>
+                                <!-- <button type="reset" class="btn btn-secondary waves-effect waves-light">لغو</button> -->
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="row" style="direction: rtl;">
+                    <div class="col-12">
+                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                            <h4 class="mb-sm-0 font-size-18"> درخواست های تلفنی ثبت شده</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="direction: rtl;">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row mb-2">
+                                    <div class="col-sm-4">
+                                        <div class="search-box me-2 mb-2 d-inline-block">
+                                            <div class="position-relative">
+                                                <input type="text" class="form-control" placeholder="جستجو...">
+                                                <i class="bx bx-search-alt search-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                    </div><!-- end col-->
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table align-middle table-nowrap table-check">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th style="width: 20px;" class="align-middle">
+                                                    ردیف
+                                                </th>
+                                                <!--  <th class="align-middle">شناسه درخواست</th> -->
+                                                <th class="align-middle">نام ونام خانوادگی</th>
+                                                <th class="align-middle">آدرس</th>
+                                                <th class="align-middle">شماره تماس</th>
+                                                <th class="align-middle">میزان بار</th>
+                                                <th class="align-middle">دسته بندی</th>
+                                                <th class="align-middle">راننده</th>
+                                                <th class="align-middle">بازه زمانی</th>
+                                                <th class="align-middle">وضعیت</th>
+                                                <th class="align-middle">توضیحات</th>
+                                                <th class="align-middle">عملیات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% for(var i=0 ; i < list.length ; i++){ %>
+                                                <tr>
+                                                    <td>
+                                                        <%=i+1%>
+                                                    </td>
+
+                                                    <td>
+                                                        <%=list[i].fullName %>
+                                                    </td>
+                                                    <td>
+                                                        <%=list[i].address %>
+                                                    </td>
+                                                    <td>
+                                                        <%=list[i].phoneNumber %>
+                                                    </td>
+                                                    <td>
+                                                        <%=list[i].amountOfLoad %>
+                                                    </td>
+                                                    <td>
+                                                        <%=list[i].category %>
+                                                    </td>
+                                                    <td>
+                                                        <%=list[i].driver %>
+                                                    </td>
+                                                    <td>
+                                                        <%=list[i].timeRange %>
+                                                    </td>
+                                                    <td>
+                                                        <%if(list[i].status==0){%>
+                                                            در انتظار پذیرش
+                                                            <%}else if(list[i].status==1){%>
+                                                                پذیرفته شده
+                                                                <%}else if(list[i].status==2){%>
+                                                                    انجام شده
+                                                                    <%}%>
+                                                    </td>
+                                                    <td>
+                                                        <%=list[i].description %>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex gap-3">
+                                                            <a href="javascript:updateManualRequest('<%=list[i]._id.toString()%>', '<%=list[i].fullName%>', '<%=list[i].address%>', '<%=list[i].phoneNumber%>', '<%=list[i].amountOfLoad%>', '<%=list[i].category%>', '<%=list[i].driver%>', '<%=list[i].timeRange%>', '<%=list[i].description%>');"
+                                                                class="text-success"><i
+                                                                    class="mdi mdi-pencil font-size-18"></i></a>
+                                                            <a href="javascript:void(0);" class="text-danger"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#myModal2<%=list[i].fullName%>">
+                                                                <i class="mdi mdi-delete font-size-18"></i></a>
+                                                            <div id="myModal2<%=list[i].fullName%>" class="modal fade"
+                                                                tabindex="-1" aria-labelledby="myModalLabel"
+                                                                aria-hidden="true" data-bs-scroll="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title" id="myModalLabel">
+                                                                                توجه</h5>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="mb-3">
+                                                                                <label for="productname">آیا از حذف
+                                                                                    اطمینان
+                                                                                    دارید؟</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                class="btn btn-primary"
+                                                                                onclick="deleteManualRequest('<%= list[i]._id.toString() %>')"
+                                                                                data-bs-toggle="modal" data-bs-target="#myModal"
+                                                                                data-bs-dismiss="modal">بله</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">خیر</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div><!-- /.modal-content -->
+                                                            </div>
+                                                    </td>
+                                                </tr>
+                                                <% } %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="pagination pagination-rounded justify-content-end mb-2">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                                            <i class="mdi mdi-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="javascript: void(0);">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end card-->
+        </div>
+
+        <script>
+            var givenId = 'none';
+            function addManualRequests() {
+                addItem(["manualRequestsFullnameInput",
+                    "manualRequestsAddressInput",
+                    "manualRequestsPhoneNumberInput",
+                    "manualRequestsAmountOfLoadInput",
+                    "manualRequestsCategoryIdInput",
+                    "manualRequestsDriverIdInput",
+                    "manualRequestsTimeRangeInput",
+                    "manualRequestsDescriptionInput"],
+                    ["fullName", "address", "phoneNumber", "amountOfLoad", "category", "driver", "timeRange", "description"],
+                    givenId, "/manual-requests/newManualRequests")
+                givenId = ""
+            }
+
+            function updateManualRequest(id, fullNameTxt, addressTxt, phoneNumberTxt, amountOfLoadTxt, categoryTxt, driverTxt, timeRangeTxt, descriptionTxt) {
+                givenId = id;
+
+                var fullName = document.getElementById("manualRequestsFullnameInput");
+                var address = document.getElementById("manualRequestsAddressInput");
+                var phoneNumber = document.getElementById("manualRequestsPhoneNumberInput");
+                var amountOfLoad = document.getElementById("manualRequestsAmountOfLoadInput");
+                var category = document.getElementById("manualRequestsCategoryIdInput");
+                var driver = document.getElementById("manualRequestsDriverIdInput");
+                var timeRange = document.getElementById("manualRequestsTimeRangeInput");
+                var description = document.getElementById("manualRequestsDescriptionInput");
+
+                fullName.value = fullNameTxt;
+                address.value = addressTxt;
+                phoneNumber.value = phoneNumberTxt;
+                amountOfLoad.value = amountOfLoadTxt;
+                category.value = categoryTxt;
+                driver.value = driverTxt;
+                timeRange.value = timeRangeTxt;
+                description.value = descriptionTxt;
+            }
+
+            function deleteManualRequest(id) {
+                deleteItem(id, "/manual-requests/deleteManualRequest");
+            }
+
+        </script>
+        <!-- end row -->
+        <%- contentFor('FooterJs') %>
+            <script src="assets/libs/select2/js/select2.min.js"></script>
+
+            <!-- dropzone plugin -->
+            <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+
+            <!-- init js -->
+            <script src="assets/js/pages/ecommerce-select2.init.js"></script>
